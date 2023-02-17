@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+:root{
+    --global-erros: hsl(0, 100%, 66%);
+    --global-branco: hsl(0, 0%, 100%);
+    --luz-cinza-violeta: hsl(270, 3%, 87%);
+    --dark-cinza-violta: hsl(279, 6%, 55%);
+    --violeta-escuro: hsl(278, 68%, 11%)
+    
+    background: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+}
+
+
+
+header{
+    background-image: url(/images/bg-main-mobile.png);
+    height: 230px;
+}
+
+.card{
+    position: relative;
+    width: 300px;
+    height: 160px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+
+
+.back{
+    background-image: url(/images/bg-card-back.png);
+    top: 30px;
+    left: 70px;
+    
+    
+}
+
+.cvc{
+    position: absolute;
+    font-size: 12px;
+    top: 100px;
+    padding: 0px 10px;
+    color: var(--global-branco);
+
+}
+
+.front{
+    background-image: url(/images/bg-card-front.png);
+    top: -44px;
+    left: 20px;
+ 
+}
+
+.logo{
+    position: absolute;
+    left: 40px;
+    top: 140px;
+    width: 64px;
+    z-index: 1;
+}
+
+.number{
+    position: absolute;
+    left: 40px;
+    font-size: 20px;
+    top: 210px;
+    color: var(--global-branco);
+    letter-spacing: 1.5px;
+}
+
+.name{
+    position: absolute;
+    left: 40px;
+    font-size: 13px;
+    top: 245px;
+    color: var(--global-branco);
+}
+.validade{
+    position: absolute;
+    left: 250px;
+    font-size: 13px;
+    top: 245px;
+    color: var(--global-branco); 
+}
