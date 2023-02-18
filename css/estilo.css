@@ -29,6 +29,7 @@ h5{
 input{
     padding: 10px;
     border-radius: 8px;
+    border: 0.5px solid var(--dark-cinza-violta);
 }
 
 button{
@@ -115,16 +116,13 @@ button:hover{
 
 
 #formulario{
-    margin-top: 100px;
     display: flex;
+    margin-top: 100px;    
     flex-direction: column;
     margin: 100px 20px;
     max-width: 300px;
 }
 
-#agradecimento{
-    display: none;
-}
 
 .inputMes,.inputAno{
     width: 80px;
@@ -142,4 +140,30 @@ button:hover{
 .dataCvc h5{
     margin-right: 55px;
     
+}
+
+
+
+#agradecimento{
+    display: none;
+    flex-direction: column;
+    margin-top: 100px;
+    margin: 100px 20px;
+    text-align: center;
+    max-width: 300px;
+}
+
+.completoImg{
+    width: 64px;
+    margin: auto;
+}
+
+#agradecimento h1{
+    margin: 20px 0px;
+    color: var(--violeta-escuro);
+}
+
+#agradecimento p{
+    margin-bottom: 20px;
+    color: var(--dark-cinza-violta);
 }
