@@ -119,20 +119,20 @@ button:hover{
     display: flex;
     margin-top: 100px;    
     flex-direction: column;
-    margin: 100px 20px;
-    max-width: 300px;
+    margin: 100px 40px;
+    max-width: 330px;
 }
 
 .inputNumber{
-    width: 70px;
+    width: 79px;
 }
 
 .inputMes,.inputAno{
-    width: 80px;
+    width: 90px;
 }
 
 .inputCvc{
-    width: 130px;
+    width: 140px;
 }
 
 .dataCvc{
@@ -151,7 +151,7 @@ button:hover{
     display: none;
     flex-direction: column;
     margin-top: 100px;
-    margin: 100px 20px;
+    margin: 100px 40px;
     text-align: center;
     max-width: 300px;
 }
