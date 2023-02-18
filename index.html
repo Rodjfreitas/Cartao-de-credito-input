@@ -36,10 +36,10 @@
 
   <div id="formulario">
     <h5>Cardholder Name</h5>
-    <input type="text" placeholder="e.g. Jane Appleseed">
+    <input class="inputName" type="text" placeholder="e.g. Jane Appleseed" onchange="changeName()">
 
     <h5>Card Number</h5>
-    <input type="number" placeholder="e.g. 1234 5678 9123 0000">
+    <input class="inputNumber" type="number" placeholder="e.g. 1234 5678 9123 0000" maxlength="5" onchange="changeNumber()">
 
     <div>
       <div class="dataCvc">
