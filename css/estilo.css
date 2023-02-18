@@ -123,6 +123,9 @@ button:hover{
     max-width: 300px;
 }
 
+.inputNumber{
+    width: 70px;
+}
 
 .inputMes,.inputAno{
     width: 80px;

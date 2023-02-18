@@ -39,7 +39,12 @@
     <input class="inputName" type="text" placeholder="e.g. Jane Appleseed" onchange="changeName()">
 
     <h5>Card Number</h5>
-    <input class="inputNumber" type="number" placeholder="e.g. 1234 5678 9123 0000" maxlength="5" onchange="changeNumber()">
+    <div>
+    <input class="inputNumber inputN1" type="number" placeholder="e.g. 1234" onchange="changeNumber()">
+    <input class="inputNumber inputN2" type="number" placeholder="5678" onchange="changeNumber()">
+    <input class="inputNumber inputN3" type="number" placeholder="9123" onchange="changeNumber()">
+    <input class="inputNumber inputN4" type="number" placeholder="0000" onchange="changeNumber()">
+    </div>
 
     <div>
       <div class="dataCvc">
@@ -47,10 +52,10 @@
       <h5>CVC</h5>
       </div>
       <input class="inputMes" type="number" placeholder="MM">
-      <input class="inputAno" type="number" placeholder="YY">
-      <input class="inputCvc" type="number" placeholder="e.g. 123">
+      <input class="inputAno" type="number" placeholder="YY" onchange="changeValidade()">
+      <input class="inputCvc" type="number" placeholder="e.g. 123" onchange="changeCVC()">
     </div>
-    <button>Confirm</button>
+    <button onclick="confirmar()">Confirm</button>
 
   </div>
 
@@ -59,7 +64,7 @@
     <img class="completoImg" src="images/icon-complete.svg" alt="">
     <h1>Thank you!</h1>
     <p>We've added your card details</p>
-    <button>Continue</button>
+    <button onclick="continuar()">Continue</button>
   </div>
 
   
