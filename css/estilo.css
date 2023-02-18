@@ -10,9 +10,9 @@
     --global-branco: hsl(0, 0%, 100%);
     --luz-cinza-violeta: hsl(270, 3%, 87%);
     --dark-cinza-violta: hsl(279, 6%, 55%);
-    --violeta-escuro: hsl(278, 68%, 11%)
+    --violeta-escuro: hsl(278, 68%, 11%);
     
-    background: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    --linear-gradient:(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
 }
 
 
@@ -21,6 +21,30 @@ header{
     background-image: url(/images/bg-main-mobile.png);
     height: 230px;
 }
+
+h5{
+    margin: 15px 0px 5px;
+}
+
+input{
+    padding: 10px;
+    border-radius: 8px;
+}
+
+button{
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 900;
+    background-color: var(--violeta-escuro);
+    color: var(--global-branco);
+    font-size: 18px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
 
 .card{
     position: relative;
@@ -87,4 +111,35 @@ header{
     font-size: 13px;
     top: 245px;
     color: var(--global-branco); 
+}
+
+
+#formulario{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    margin: 100px 20px;
+    max-width: 300px;
+}
+
+#agradecimento{
+    display: none;
+}
+
+.inputMes,.inputAno{
+    width: 80px;
+}
+
+.inputCvc{
+    width: 130px;
+}
+
+.dataCvc{
+    display: flex;
+    
+}
+
+.dataCvc h5{
+    margin-right: 55px;
+    
 }
