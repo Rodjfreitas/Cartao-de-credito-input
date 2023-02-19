@@ -42,18 +42,18 @@ function changeNumber(){
 
 function changeValidade(){   
 
-    if(inputMes.value.length != 2 || inputAno.value.length != 2){
-        alert('Mês e ano não podem ser menores/maiores que dois dígitos')
+    if(inputMes.value.length != 2 || inputAno.value.length != 2 ||
+        inputMes.value > 12 || inputAno.value < 23){
+        alert('Mês e ano Inválidos. Insira dois dígitos.')
         inputAno.value = ""
         inputMes.value = ""
         inputMes.focus()
     }else{
-        if(inputMes.value > 12 || inputAno.value < 23){
-            alert('Mes/Ano Inválido')
-            inputMes.focus()
-        }
+
+        validadeCartao.innerText = `${inputMes.value}/${inputAno.value}`    
+        
     
-        validadeCartao.innerText = `${inputMes.value}/${inputAno.value}`
+        
         
     }
 
