@@ -20,18 +20,48 @@ function changeName(){
     }
 }
 
+function numberCard(){
+    let digito1 = document.querySelector('.inputN1')
+    if(digito1.value.length != 4){
+        alert('Verifique os números digitados') 
+        digito1.focus()
+    }
+}
+
+function numberCard2(){
+    let digito2 = document.querySelector('.inputN2')
+    if(digito2.value.length != 4){
+        alert('Verifique os números digitados') 
+        digito2.focus()
+    }
+}
+
+function numberCard3(){
+    let digito3 = document.querySelector('.inputN3')
+    if(digito3.value.length != 4){
+        alert('Verifique os números digitados') 
+        digito3.focus()
+    }
+}
+
+
+
 function changeNumber(){
-        let digito1 = document.querySelector('.inputN1') 
-        let digito2 = document.querySelector('.inputN2') 
-        let digito3 = document.querySelector('.inputN3') 
-        let digito4 = document.querySelector('.inputN4') 
+    let digito1 = document.querySelector('.inputN1')
+    let digito2 = document.querySelector('.inputN2')
+    let digito3 = document.querySelector('.inputN3')
+    let digito4 = document.querySelector('.inputN4')
 
-    if(inputNumber.value.length != 4){
-        alert('Verifique os números digitados')
-    }else{        
-
+    if(digito4.value.length != 4){
+        alert('Verifique os números digitados') 
+        digito4.focus()
+    }else if(digito1.value == "" || digito2.value == "" || digito3.value == ""){
+        alert('Verifique os dados do Cartão')
+        digito1.focus()
+    }else{
         numeroCartao.innerText = `${digito1.value} ${digito2.value} ${digito3.value} ${digito4.value}`
     }
+    
     
     
     
