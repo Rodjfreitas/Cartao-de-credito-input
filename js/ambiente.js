@@ -83,7 +83,7 @@ function changeMes(){
         inputMes.focus()
         inputMes.style.border = "1px solid var(--global-erros)"
     }else if(validacaoMes(inputMes)){
-        alert('Mês não pode ser maior que 12')
+        alert('Mês inexistente')
         inputMes.value = ""
         inputMes.focus()
         inputMes.style.border = "1px solid var(--global-erros)"
