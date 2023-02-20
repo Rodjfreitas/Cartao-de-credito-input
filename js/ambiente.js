@@ -62,27 +62,45 @@ function validacaoAno(n){
     }
 }
 
+function validade(){
+    validadeCartao.innerText = `${inputMes.value}/${inputAno.value}` 
+}
 
 
-function changeValidade(){ 
+
+function changeMes(){ 
     
-    if(validacaoDigito(inputMes) || validacaoDigito(inputAno)){
-        alert('Mês/ano precisam ter dois dígitos')
+    if(validacaoDigito(inputMes)){
+        alert('Mês precisa ter dois dígitos')
         inputMes.focus()
     }else if(validacaoMes(inputMes)){
         alert('Mês não pode ser maior que 12')
         inputMes.focus()
+    }else{
+        validade()
+     
+    }    
+
+}
+
+
+function changeAno(){ 
+    
+    if(validacaoDigito(inputAno)){
+        alert('Ano precisa ter dois dígitos')
+        inputAno.focus()
     }else if(validacaoAno(inputAno)){
         alert('Ano não pode ser menor que o atual')
         inputAno.focus()
     }else{
-
-        validadeCartao.innerText = `${inputMes.value}/${inputAno.value}`  
-        
-        
-    }
+        validade()
+     
+    }    
 
 }
+
+
+
 
 function changeCVC(){
     if(inputCvc.value.length != 3){
