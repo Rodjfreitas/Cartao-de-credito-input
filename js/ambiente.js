@@ -38,22 +38,46 @@ function changeNumero(){
 }
 
 
+function validacaoDigito(n){
+    if(n.value.length != 2){
+        return true
+    }else{
+        return false
+    }
+}
+
+function validacaoMes(n){
+    if(n.value > 12){
+        return true
+    }else{
+        return false
+    }
+}
+
+function validacaoAno(n){
+    if(n.value < 23){
+        return true
+    }else{
+        return false
+    }
+}
 
 
 
-function changeValidade(){   
-
-    if(inputMes.value.length != 2 || inputAno.value.length != 2 ||
-        inputMes.value > 12 || inputAno.value < 23){
-        alert('Mês e ano Inválidos. Insira dois dígitos.')
-        inputAno.value = ""
-        inputMes.value = ""
+function changeValidade(){ 
+    
+    if(validacaoDigito(inputMes) || validacaoDigito(inputAno)){
+        alert('Mês/ano precisam ter dois dígitos')
         inputMes.focus()
+    }else if(validacaoMes(inputMes)){
+        alert('Mês não pode ser maior que 12')
+        inputMes.focus()
+    }else if(validacaoAno(inputAno)){
+        alert('Ano não pode ser menor que o atual')
+        inputAno.focus()
     }else{
 
-        validadeCartao.innerText = `${inputMes.value}/${inputAno.value}`    
-        
-    
+        validadeCartao.innerText = `${inputMes.value}/${inputAno.value}`  
         
         
     }
@@ -75,7 +99,10 @@ function confirmar(){
     if(inputName.value.length == 0 || inputNumber.value.length == 0 ||
         inputMes.value.length == 0 || inputAno.value.length == 0 ||
         inputCvc.value.length == 0){
-            alert('Confira os dados informados')
+            alert('Não pode haver campos vazios')
+        }else if(validacaoDigito(inputMes) || validacaoDigito(inputAno) || 
+        validacaoMes(inputMes) || validacaoAno(inputAno)){
+            alert('Há inconsistência nos dados informados')
         }else{
             let screenFormulario = document.querySelector('#formulario')
             let screenAgradecimento = document.querySelector('#agradecimento')
