@@ -8,15 +8,21 @@ let inputAno = document.querySelector('.inputAno')
 let numeroCvc = document.querySelector('.cvc')
 let inputCvc = document.querySelector('.inputCvc')
 
+//Expressão regular que verifica se há letras depois do espaço
+function checkSpaceInName(str){
+    return /\s[a-zA-Z]/.test(str)
+}
 
-function changeName(){
-    
+function changeName(){    
     //nao permitir que seja inserido apenas o primeiro nome
-    if(inputName.value.indexOf(" ") === -1){
+    
+    if(!checkSpaceInName(inputName.value)){
         alert('Digite o nome completo')
         inputName.focus()
+        inputName.style.border = "1px solid var(--global-erros)"
     }else{
     nomeCartao.innerText = inputName.value
+    inputName.style.border = "1px solid green"
     }
 }
 
@@ -30,9 +36,10 @@ function changeNumero(){
         alert('Cartão inválido')
         inputNumber.value = ""
         inputNumber.focus()
-        console.log(inputNumber.value.length)
+        inputNumber.style.border = "1px solid var(--global-erros)"
     }else{
     numeroCartao.innerText = addEspaco(inputNumber.value)
+    inputNumber.style.border = "1px solid green"
     }
 
 }
@@ -72,12 +79,17 @@ function changeMes(){
     
     if(validacaoDigito(inputMes)){
         alert('Mês precisa ter dois dígitos')
+        inputMes.value = ""
         inputMes.focus()
+        inputMes.style.border = "1px solid var(--global-erros)"
     }else if(validacaoMes(inputMes)){
         alert('Mês não pode ser maior que 12')
+        inputMes.value = ""
         inputMes.focus()
+        inputMes.style.border = "1px solid var(--global-erros)"
     }else{
         validade()
+        inputMes.style.border = "1px solid green"
      
     }    
 
@@ -88,12 +100,17 @@ function changeAno(){
     
     if(validacaoDigito(inputAno)){
         alert('Ano precisa ter dois dígitos')
+        inputAno.value = ""
         inputAno.focus()
+        inputAno.style.border = "1px solid var(--global-erros)"
     }else if(validacaoAno(inputAno)){
         alert('Ano não pode ser menor que o atual')
+        inputAno.value = ""
         inputAno.focus()
+        inputAno.style.border = "1px solid var(--global-erros)"
     }else{
         validade()
+        inputAno.style.border = "1px solid green"
      
     }    
 
@@ -107,8 +124,10 @@ function changeCVC(){
         alert('Verifique o código de segurança')
         inputCvc.value = ""
         inputCvc.focus()
+        inputCvc.style.border = "1px solid var(--global-erros)"
     }else{
         numeroCvc.innerText = inputCvc.value
+        inputCvc.style.border = "1px solid green"
     }
 
 }
@@ -117,10 +136,11 @@ function confirmar(){
     if(inputName.value.length == 0 || inputNumber.value.length == 0 ||
         inputMes.value.length == 0 || inputAno.value.length == 0 ||
         inputCvc.value.length == 0){
-            alert('Não pode haver campos vazios')
+            alert('Obrigatório preencher todos os campos.')
         }else if(validacaoDigito(inputMes) || validacaoDigito(inputAno) || 
-        validacaoMes(inputMes) || validacaoAno(inputAno)){
-            alert('Há inconsistência nos dados informados')
+        validacaoMes(inputMes) || validacaoAno(inputAno) || 
+        !checkSpaceInName(inputName.value)){
+            alert('Há inconsistência nos dados informados.')
         }else{
             let screenFormulario = document.querySelector('#formulario')
             let screenAgradecimento = document.querySelector('#agradecimento')
